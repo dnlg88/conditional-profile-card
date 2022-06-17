@@ -32,10 +32,8 @@ function render(variables = {}) {
   variables.lastname == null ? (variables.lastname = "") : "";
   variables.role == null ? (variables.role = "Your role here") : "";
   variables.city == null ? (variables.city = "Your city here") : "";
-  variables.country == null ? (variables.country = "Your country here") : "";
-  variables.twitter == null
-    ? (variables.twitter = "https://www.twitter.com")
-    : "";
+  variables.country == null ? (variables.country = "your country here") : "";
+  variables.twitter == null ? (variables.twitter = "/") : "";
   variables.github == null ? (variables.github = "/") : "";
   variables.linkedin == null ? (variables.linkedin = "/") : "";
   variables.instagram == null ? (variables.instagram = "/") : "";
@@ -46,8 +44,7 @@ function render(variables = {}) {
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name} ${variables.lastname}</h1>
           <h2>${variables.role}</h2>
-          <h3>${variables.city}</h3>
-          <h3>${variables.country}</h3>
+          <h3>${variables.city}, ${variables.country}</h3>
           <ul class=${variables.socialMediaPosition}>
             <li><a href="${variables.twitter}"><i class="fab fa-twitter"></i></a></li>
             <li><a href="${variables.github}"><i class="fab fa-github"></i></a></li>
